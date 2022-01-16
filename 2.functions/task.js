@@ -31,15 +31,17 @@ function worker(arr) {
 }
 
 function makeWork(arrOfArr, func) {
-    let max;
+    let max = arrOfArr[0];
     for (let k = 0; k < arrOfArr.length; k++) {
-        func(arrOfArr[k]);
-        if (func(arrOfArr[k]) > max) {
-            max = func(arrOfArr[k]);
+		let nozzle = func(arrOfArr[k]);
+        if (nozzle > max) {
+            max = sum;
         }
     }
     return max;
 }
+
+
 // Задание 3
 function worker2(arr) {
     // Ваш код
